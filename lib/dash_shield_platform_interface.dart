@@ -24,6 +24,7 @@ abstract class DashShieldPlatform extends PlatformInterface {
     _instance = instance;
   }
 
+  //da
   /// Prevents screenshots and screen recording globally for the entire app.
   ///
   /// This method must be implemented by platform-specific code (e.g., Android and iOS).
