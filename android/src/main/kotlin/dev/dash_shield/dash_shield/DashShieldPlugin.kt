@@ -45,11 +45,7 @@ class DashShieldPlugin: FlutterPlugin, MethodCallHandler {
     }
   }
 
-  override fun onDetachedFromEngine(@NonNull binding: FlutterPlugin.FlutterPluginBinding) {
-    channel.setMethodCallHandler(null)
-  }
 
-  override fun onDetachedFromActivity() {
-    // Cleanup if necessary
-  }
+
+
 }

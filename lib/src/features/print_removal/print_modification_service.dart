@@ -25,6 +25,7 @@ class PrintModificationService {
       for (int i = 0; i < lines.length; i++) {
         if (regExp.hasMatch(lines[i].trim())) {
           print('print has been removed in $fileName at line ${i + 1}');
+
           lines.removeAt(i);
         }
       }
@@ -69,6 +70,7 @@ class PrintModificationService {
 
         if (regExp.hasMatch(lines[i].trim()) && !insideDebugModeBlock) {
           counterForPrints++;
+
           print('Wrapping print statement in $fileName at line ${i + 1}');
 
           // Wrap the print statement in an if (kDebugMode) block
@@ -79,6 +81,7 @@ class PrintModificationService {
       if (counterForPrints > 0) {
         if (!fileContent.contains(importStatement)) {
           print('Adding missing import to $fileName');
+
           lines.insert(0, importStatement);
         }
       }
