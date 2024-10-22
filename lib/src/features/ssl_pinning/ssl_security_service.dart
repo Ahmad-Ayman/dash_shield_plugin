@@ -35,7 +35,7 @@ class SSLSecurityService {
       final ByteData data = await rootBundle.load(certificateAssetPath);
       SecurityContext securityContext =
           SecurityContext(withTrustedRoots: false);
-      securityContext.setTrustedCertificatesBytes(data.buffer.asUint8List());
+      securityContext.setTrustedCertificatesBytes(data.buffer.asInt8List());
 
       if (client is Dio) {
         HttpClient httpClient = HttpClient(context: securityContext);
