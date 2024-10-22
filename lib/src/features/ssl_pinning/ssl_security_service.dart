@@ -36,7 +36,7 @@ class SSLSecurityService {
       SecurityContext securityContext =
           SecurityContext(withTrustedRoots: false);
       securityContext.setTrustedCertificatesBytes(data.buffer.asInt8List());
-
+      //d
       if (client is Dio) {
         HttpClient httpClient = HttpClient(context: securityContext);
         httpClient.badCertificateCallback =
